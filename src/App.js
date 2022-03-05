@@ -21,6 +21,7 @@ const endpoint = '' //your cognitative services instance endpoint;
 const syncTokenEndpoint = '' //the URL for a twilio function that returns a sync token;
 const credentials = new ApiKeyCredentials({ inHeader: { 'Ocp-Apim-Subscription-Key': key } })
 const computerVisionClient = new ComputerVisionClient(credentials, endpoint);
+const phoneNumber = "tel:+61480017680" //your twilio phone number precceded with tel:
 
 
 function App (props) {
@@ -162,7 +163,7 @@ function App (props) {
         />  
       </div>
       <div className='status' style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '30px'}}>
-        { !ocrResult ? <Typography variant="subtitle1" gutterBottom component="div">Take a photo of some text to continue</Typography> : <a href="tel:+61480017680"><Button variant='contained'> Dial to Hear results </Button></a> }
+        { !ocrResult ? <Typography variant="subtitle1" gutterBottom component="div">Take a photo of some text to continue</Typography> : <a href={phoneNumber}><Button variant='contained'> Dial to Hear results </Button></a> }
         <br/>
         {/* { !syncToken ? <p>Sync Token: Fetching</p> : <p>Sync Token:  Done!</p>}
         { !syncClient ? <p>Sync Client State: Not running</p> : <p>Sync Client State:  Running</p>}
