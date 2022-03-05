@@ -3,12 +3,12 @@ This code is useless to you without the following:
 A Twilio project with
 - A sync doc in the default service called 'ocr'
 - A public Twilio function that returns a sync token (not in JSON - just the token as the whole response) with permissions scoped to the above service
-- Flex is provisioned and is runnin this plugin - https://github.com/EKennedyAustralia/plugin-ccw
-- A studio flow or TWML that directs calls based in the values found in the SynCDoc - i.e.e just <SAY> the value or whatever logic you want
+- Flex is provisioned and is running this plugin - https://github.com/EKennedyAustralia/plugin-ccw
+- A studio flow or TWML that directs calls based in the values found in the SyncDoc - i.e just <SAY> the value or whatever logic you want
   
 An Azure account with the following
-  - Azure storgae blob container set up with permission to upload from a web clientvinc API key, container ID etc
-  - A cognitative services resource group with Optical character Recogintion resource enabled and the approprite keys for that
+  - Azure storgae blob container set up with permission to upload from a web client inc API key, container ID etc
+  - A cognitative services resource group with Optical character Recogintion resource enabled and the appropriate keys for that
   
   
   
